@@ -9,8 +9,7 @@
 <h1 align="left">Hi 👋, I'm Calvin</h1>
 <h3 align="left">Learnt to do this assessment in SHRDC</h3>
 
-<h6 align="left">The following dataset is regarding a NLP dataset that has two columns which is target(y): category and feature(x): text<br>             
-Credits to ([https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon](https://www.kaggle.com/datasets/kunalgupta2616/hackerearth-customer-segmentation-hackathon))</h6>
+<h6 align="left">The following dataset is regarding a NLP dataset that has two columns which is target(y): category and feature(x): text</h6>
 
 <h6 align="left"> What I did: </h6>
 
