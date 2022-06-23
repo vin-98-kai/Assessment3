@@ -58,7 +58,7 @@ text = df['text'].values # Features : X
 category = df['category'].values # category : y
 
 for index,tex in enumerate(text):
-    text[index] = re.sub('<.*?>',' ',tex)
+    text[index] = re.sub('(.*?)',' ',tex)
     text[index] = re.sub('[^a-zA-Z]',' ',tex).lower().split()
 
 # Step 4) Features Selection (Dont have)
