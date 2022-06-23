@@ -6,11 +6,10 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-<h1 align="left">Hi 👋, I'm Calvin</h1>
+<h2 align="left">Hi 👋, I'm Calvin</h2>
 <h3 align="left">Learnt to do this assessment in SHRDC</h3>
 
 <h6 align="left">The following dataset is regarding a NLP dataset that has two columns which is target(y): category and feature(x): text</h6>
-
 <h6 align="left"> What I did: </h6>
 
 - Batch
@@ -23,6 +22,7 @@
 - Tokenization 
 - Padding
 - Masking/Embedding
+- tanh
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/83624724/175305128-c1f60a70-538e-4f41-807e-84fa27e9889f.png" width="300">
@@ -39,6 +39,26 @@
 <p align="center">
   <img src="https://user-images.githubusercontent.com/83624724/175305349-7e7e2d48-89b2-4e63-bd52-988fbe2c8202.png" width="300">
 </p>
+
+– – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – –  
+<h6 align="left">after applying model.add(Dense(num_node,activation=('tanh'))) I was able to get accuracy more than 77%, recall 71% and 72% with vocab_size = 1000</h6>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83624724/175350933-e7086c58-ee07-4cac-86ab-db08fd1b98e4.png" width="300">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83624724/175351025-d10d99b3-43bd-4934-9d20-708ed247a861.PNG" width="300">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83624724/175351121-87fe9637-1553-47b4-830e-431f8cf13865.PNG" width="300">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83624724/175351205-1ba32d3b-ed8c-435d-8a00-2031697436a4.png" width="300">
+</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/83624724/175351230-f7860430-7680-438f-a77c-1e5244c45074.png" width="300">
+</p>
+
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
