@@ -18,6 +18,7 @@ from modules_for_articles_cate import ModelCreation
 
 from tensorflow.keras.utils import plot_model
 from tensorflow.keras.callbacks import TensorBoard
+from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -97,7 +98,7 @@ X_test = np.expand_dims(X_test,axis=-1)
 
 #%% Model Development
 mc = ModelCreation()
-model = mc.bidirection_lstm_layer(X_train)
+model = mc.bidirection_lstm_layer(X_train,num_node=64)
 
 plot_model(model,show_layer_names=(True),show_shapes=(True))
 
@@ -105,12 +106,13 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',metrics='acc')
 
 # callbacks
 tensorboard_callback=TensorBoard(log_dir=LOG_FOLDER_PATH)
+early_stopping_callback = EarlyStopping(monitor='loss',patience=5)
 
 hist = model.fit(X_train,y_train,
-          epochs=50,
+          epochs=70,
           batch_size=128,
           validation_data=(X_test,y_test),
-          callbacks=[tensorboard_callback])
+          callbacks=[tensorboard_callback,early_stopping_callback])
 
 #%%
 hist.history.keys()
@@ -149,11 +151,11 @@ with open(TOKENIZER_PATH,'w') as file:
         json.dump(token_json,file)
 
 #%% Discussion / Report
-# Model achieved around 80% accuracy during training
-# Recall and f1 score reports 78% and 78%% respectively
-# However the model overfit after 20th epoch
-# Earlystopping can be introduced in future to prevent overfitting
+# Model achieved around 80% accuracy during training without EarlyStopping
+# Recall and f1 score reports 78% and 78%% respectively without EarlyStopping
+# However the model hit 35% after applying EarlyStopping
+# Need more data because most of them is padded and embedded
 # Flatten() maybe introduced during training
-# Increase dropout rate to control overfitting
+# decrease dropout rate to control overfitting
 # Trying with different DL architecture for example BERT model, transformer
 # model, GPT3 model may help to improve the model
