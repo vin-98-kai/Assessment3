@@ -159,3 +159,5 @@ with open(TOKENIZER_PATH,'w') as file:
 # decrease dropout rate to control overfitting
 # Trying with different DL architecture for example BERT model, transformer
 # model, GPT3 model may help to improve the model
+# after applying model.add(Dense(num_node,activation=('tanh'))) I was able to
+#get accuracy more than 77%, recall 71% and 72% with vocab_size = 1000
